@@ -220,11 +220,20 @@ This project demonstrates:
 
 ## 📸 Screenshots
 
-Add your screenshots in the `screenshots/` folder:
-- `home-page.png` - Main interface
-- `voice-command.png` - Voice recognition in action
-- `docker-output.png` - Docker command results
-- `kubernetes-output.png` - Kubernetes operations
+### Main Interface
+![Home Page](screenshots/home-page.png)
+
+### Voice Recognition in Action
+![Voice Listening](screenshots/voice-listening.png)
+
+### Docker Integration
+![Docker Output](screenshots/docker-output.png)
+
+### Kubernetes Operations
+![Kubernetes Output](screenshots/kubernetes-output.png)
+
+### System Health Check
+![Health Check](screenshots/health-check.png)
 
 ## 🌟 Project Highlights
 
