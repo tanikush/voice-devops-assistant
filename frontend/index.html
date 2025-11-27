@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice DevOps Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎤 Voice DevOps Assistant</h1>
+        <p class="subtitle">AI-Powered DevOps Automation with Voice Commands</p>
+        
+        <div class="instructions">
+            <p>📌 Click "Start Listening" and speak clearly</p>
+            <p>💡 Try: "show pods", "list containers", "health check", "show logs of backend"</p>
+        </div>
+        
+        <div class="voice-section">
+            <button id="startBtn" class="voice-btn start">🎤 Start Listening</button>
+            <button id="stopBtn" class="voice-btn stop" disabled>⏹️ Stop</button>
+        </div>
+        
+        <div class="status">
+            <p id="status">Ready to listen...</p>
+        </div>
+        
+        <div class="command-display">
+            <h3>🗣️ Your Command:</h3>
+            <p id="command-text">No command yet...</p>
+        </div>
+        
+        <div class="response-display">
+            <h3>🤖 Assistant Response:</h3>
+            <p id="response-text">Waiting for command...</p>
+        </div>
+        
+        <div class="features">
+            <h3>✨ Features:</h3>
+            <ul>
+                <li>🎤 Voice Recognition</li>
+                <li>🤖 AI Command Understanding</li>
+                <li>🔊 Voice Responses</li>
+                <li>🐳 Docker Integration</li>
+                <li>☸️ Kubernetes Support</li>
+            </ul>
+        </div>
+        
+        <div class="debug-section">
+            <h4>🔧 Debug Tools:</h4>
+            <button onclick="testBackend()">Test Backend</button>
+            <button onclick="testMicrophone()">Test Microphone</button>
+            <p id="debug-text"></p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script>
+        function testBackend() {
+            fetch('http://127.0.0.1:5000/api/health')
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById('debug-text').textContent = 
+                        '✅ Backend Connected: ' + JSON.stringify(data);
+                })
+                .catch(err => {
+                    document.getElementById('debug-text').textContent = 
+                        '❌ Backend Error: ' + err.message;
+                });
+        }
+        
+        function testMicrophone() {
+            navigator.mediaDevices.getUserMedia({audio: true})
+                .then(() => {
+                    document.getElementById('debug-text').textContent = 
+                        '✅ Microphone Working!';
+                })
+                .catch(err => {
+                    document.getElementById('debug-text').textContent = 
+                        '❌ Microphone Error: ' + err.message;
+                });
+        }
+    </script>
+</body>
+</html>

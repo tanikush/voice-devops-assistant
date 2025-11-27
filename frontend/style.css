@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: white;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.instructions {
+    background: rgba(255,255,255,0.15);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.instructions p {
+    margin: 5px 0;
+    font-size: 1.1rem;
+}
+
+.voice-section {
+    margin: 30px 0;
+}
+
+.voice-btn {
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.voice-btn.start {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+}
+
+.voice-btn.stop {
+    background: linear-gradient(135deg, #f44336, #da190b);
+}
+
+.voice-btn:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.voice-btn:active:not(:disabled) {
+    transform: translateY(-1px);
+}
+
+.voice-btn:disabled {
+    background: #999;
+    cursor: not-allowed;
+    transform: none;
+    opacity: 0.6;
+}
+
+.status {
+    background: rgba(255,255,255,0.2);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 2px solid rgba(255,255,255,0.3);
+}
+
+.command-display, .response-display {
+    background: rgba(255,255,255,0.15);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.command-display h3, .response-display h3 {
+    color: #FFD700;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+#command-text, #response-text {
+    background: rgba(0,0,0,0.3);
+    padding: 15px;
+    border-radius: 8px;
+    min-height: 60px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.debug-section {
+    background: rgba(0,0,0,0.2);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.debug-section h4 {
+    margin-bottom: 10px;
+    color: #FFD700;
+}
+
+.debug-section button {
+    background: #2196F3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.debug-section button:hover {
+    background: #0b7dda;
+}
+
+#debug-text {
+    margin-top: 10px;
+    padding: 10px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 5px;
+    min-height: 30px;
+}
+
+.features {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.features h3 {
+    color: #FFD700;
+    margin-bottom: 15px;
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.features li {
+    padding: 8px 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.features li:last-child {
+    border-bottom: none;
+}
