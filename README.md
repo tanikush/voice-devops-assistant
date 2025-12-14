@@ -145,7 +145,7 @@ curl http://localhost:5000/api/health
 2. Click "Test Backend Connection"
 3. Click "Test Microphone"
 4. Try voice commands
-
+   
 ## 🚀 Advanced Features
 
 ### AI Command Understanding
